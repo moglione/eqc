@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="Expires" content="0">
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+
+
+  
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+  
+
+.noticia {
+  font-family: 'Raleway', Arial, sans-serif;
+ 
+  overflow: hidden;
+  margin: 0px;
+  width: 100%;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  
+}
+
+.noticia * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.imagenTop {
+    width: 100vw;
+}
+
+
+
+.noticia h3,
+.noticia p {
+  margin: 0;
+  padding: 0;
+}
+
+.noticia h3 {
+  min-height: 50px;
+ 
+  margin-top: 20px;
+  margin-left: 20px;
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+  font-size:1.5em;
+}
+
+.noticia p {
+  font-size: 1em;
+  margin-bottom: 20px;
+  line-height: 1.4em;
+}
+
+.noticia a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+ 
+  z-index: 1;
+}
+
+/* Demo purposes only */
+body {
+  background-color: #212121;
+  margin:0;
+}
+
+
+
+
+.noticia .date {
+  background-color: #7f8c8d;
+  top: 15px;
+  color: #fff;
+  left: 15px;
+  min-height: 48px;
+  min-width: 48px;
+  position: absolute;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.noticia .date span {
+  display: block;
+  line-height: 24px;
+}
+
+.noticia .date .month {
+  font-size: 14px;
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.texto{
+  padding:20px;
+}
+
+.backbutton{
+  
+  width:90%;
+  height: 50px;
+  background-color: green;
+  margin: 10px 5% 20px 5%;
+  box-sizing: border-box;
+  text-align: center;
+  line-height: 50px;
+}
+
+a{
+  
+  text-decoration: none;
+  color:white;
+}
+
+</style>
+
+  
+</head>
+
+<body>
+
+
+	
+<div class="main">
+
+	
+  
+  <div class="noticia">
+    
+	  <img  src="[onshow.foto;strconv=no]" class="imagenTop"/>
+	  	  
+    <div class="date">
+      <span class="day">[onshow.dia;strconv=no]</span>
+      <span class="month">[onshow.mes;strconv=no]</span>
+    </div>
+	  
+    <h3>[onshow.titulo;strconv=no]</h3>
+	  <div class="texto">[onshow.texto;strconv=no]</div>
+	   
+
+	  <a href="volver.html">
+      <div class="backbutton">VOLVER A TAPA</div>
+    </a>
+  </div>
+
+
+	
+
+
+</div>
+
+
+
+ 
+</body>
+</html>

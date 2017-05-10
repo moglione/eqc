@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  
+  <meta http-equiv="Expires" content="0">
+  <meta name="apple-mobile-web-app-capable" content="yes" /> 
+  <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+
+
+  
+  <style type="text/css">
+  @import url(https://fonts.googleapis.com/css?family=Raleway:400,600,700);
+  
+
+.noticia {
+  font-family: 'Raleway', Arial, sans-serif;
+  position: relative;
+  float: left;
+  overflow: hidden;
+  margin: 0px;
+  width: 100%;
+  background-color: #000000;
+  color: #000000;
+  text-align: left;
+  font-size: 16px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+  height:100vh;
+}
+
+.noticia * {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.noticia img {
+  vertical-align: top;
+  position: relative;
+  height: 76vh;
+  
+  position: absolute;
+   left: 50%;
+   top: 0;
+   -webkit-transform: translateX(-50%);
+   opacity: 0.7;
+
+}
+
+.noticia .titulos {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  padding: 15px 15px 0px;
+  background-color: #000000;
+  color: #ffffff;
+  /* height: 40vh; */
+}
+
+.noticia h3,
+.noticia p {
+  margin: 0;
+  padding: 0;
+}
+
+.noticia h3 {
+  min-height: 50px;
+  margin-bottom: 10px;
+  display: inline-block;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.noticia p {
+  font-size: 0.8em;
+  margin-bottom: 20px;
+  line-height: 1.6em;
+}
+
+.noticia a {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  position: absolute;
+  z-index: 1;
+}
+
+/* Demo purposes only */
+body {
+  background-color: #212121;
+  margin:0;
+}
+
+
+ .logo1{
+      position: fixed;
+      top:10px;
+      left:10px;
+      background-image: url(images/logo1.png);
+      width:100vw;
+      height: 20vh;
+      z-index: 9000;
+      background-size: 20vw;
+      background-repeat: no-repeat;
+   }
+
+   
+   .logo2{
+      position: absolute;
+      top:69vh;
+      left:0px;
+      background-image: url(images/logo2.png);
+      width:100vw;
+      height: 20vh;
+      z-index: 9000;
+      background-size: 50vw;
+      background-repeat: no-repeat;
+   }
+
+
+#menu {
+    width: 7%;
+    position: fixed;
+    top: 5%;
+    right: 2%;
+    transform: translateX(-50%);
+    z-index: 5000;
+}
+
+</style>
+
+  
+</head>
+
+<body>
+
+
+ <div class="logo1"></div>	
+ <a href="menu.html"><img src="images/menu.png" id="menu"></a>
+
+<div class="main">
+
+	
+[bloque1;block=begin]    
+  <div class="noticia">
+   
+	  <div class="image"><img src="[bloque1.foto;strconv=no]"/></div>
+	  
+	  <div class="titulos">
+	    <h3>[bloque1.titulo;strconv=no]</h3>
+	    <p>[bloque1.bajada;strconv=no]</p>
+	  </div>  
+
+	</div>
+
+[bloque1;block=end]
+
+	
+
+
+</div>
+
+
+<script type="text/javascript" src="js/onepagescroll.js"></script>
+<link href='css/onepage-scroll.css' rel='stylesheet' type='text/css'>
+
+<script>
+	 onePageScroll(".main", {
+   sectionContainer: ".noticia",     // sectionContainer accepts any kind of selector in case you don't want to use section
+   easing: "ease",                  // Easing options accepts the CSS3 easing animation such "ease", "linear", "ease-in", 
+                                    // "ease-out", "ease-in-out", or even cubic bezier value such as "cubic-bezier(0.175, 0.885, 0.420, 1.310)"
+   animationTime: 800,             // AnimationTime let you define how long each section takes to animate
+   pagination: false,                // You can either show or hide the pagination. Toggle true for show, false for hide.
+   updateURL: false,                // Toggle this true if you want the URL to be updated automatically when the user scroll to each page.
+   beforeMove: function(index) {},  // This option accepts a callback function. The function will be called before the page moves.
+   afterMove: function(index) {},   // This option accepts a callback function. The function will be called after the page moves.
+   loop: false,                     // You can have the page loop back to the top/bottom when the user navigates at up/down on the first/last page.
+   keyboard: true,                  // You can activate the keyboard controls
+   responsiveFallback: false        // You can fallback to normal page scroll by defining the width of the browser in which
+                                    // you want the responsive fallback to be triggered. For example, set this to 600 and whenever 
+                                    // the browser's width is less than 600, the fallback will kick in.
+   });
+		
+	</script>
+ 
+</body>
+</html>

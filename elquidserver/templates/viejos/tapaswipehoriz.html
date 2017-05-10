@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+  <title>elquid</title>
+
+  <meta http-equiv="Expires" content="0">
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0"/>
+
+   
+  <style type="text/css">
+
+   @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,800);
+   @import url(https://fonts.googleapis.com/css?family=Montserrat:700|Lato:400);
+   @import url(https://fonts.googleapis.com/css?family=Roboto:300,400);
+  
+    * {
+      padding: 0;
+      margin: 0;
+      border: 0;
+    }
+
+    body {
+      background-color: #000000;
+      padding: 0px;
+      margin: 0px;
+    }
+
+
+   
+
+    #gallery {
+      list-style: none;
+      height: 100vh;
+      background: #000000;
+      cursor: hand;
+      cursor: -moz-grab;
+      cursor: -webkit-grab;
+      cursor: grab;
+
+    }
+
+    #gallery li {
+      border-right: 5px solid #111;
+    }
+
+    #gallery .item {
+      
+    }
+
+    #gallery li:last-child  {
+      border: 0;
+    }
+
+ .imagenTop {
+      display: block;
+       -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      -webkit-user-drag: none;
+              user-drag: none;
+
+      height: 70%;
+      width: auto;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      opacity: 0.7;
+    
+      
+
+    }
+
+
+  
+
+
+    .contenido img {
+      display: block;
+      
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none;
+      -webkit-user-drag: none;
+              user-drag: none;
+
+      
+      width: 100%;
+      margin-top:1vh;
+      margin-bottom:1vh;
+      
+      opacity: 1;
+
+      
+    
+      
+
+    }
+
+   
+   .cover{ 
+        box-sizing: border-box;
+        position: relative; 
+        height: 35vh; 
+        width: 100vw; 
+        border-top: 10vh solid transparent; 
+        border-left: 100vw solid #000000; 
+        position:absolute;
+        top:60vh;
+    }
+
+.titulo{
+        color: white;
+        display: inline-block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 7.5vw;
+        line-height: 9.2vw;
+        width:100%;
+        letter-spacing: -0.4px;
+        text-align: left;
+        position:absolute;
+        top:75vh;
+        
+    }
+
+
+
+    section {
+          width: 100vw;
+          height: 100vh;
+          position: absolute;
+          overflow-x: hidden;
+        }
+
+    
+
+
+
+    .bajada{
+        color: rgba(255,255,255,0.8);
+        display: inline-block;
+        font-family: "Open sans", sans-serif;
+        font-weight: 300;
+        font-size: 6vw;
+        line-height: 7vw;
+        width:95%;
+        letter-spacing: -0.4px;
+        z-index: 9000;
+        display:inline-block;
+        margin-bottom: 1vh;
+        
+    }
+
+    .texto{
+        color: white;
+        display: inline-block;
+        font-family: "Roboto", sans-serif;
+        font-weight: 300;
+        font-size: 3w;
+        line-height: 5vw;
+        width:100%;
+        letter-spacing: -0.4px;
+        z-index: 9000;
+        display:inline-block;
+        margin-top:2vh;
+    }
+
+
+   .contenido{
+       position: absolute;
+       top:0;
+       left:5%;
+       width:90%;
+       height:100%;
+       background-color: rgba(0,120,0,0.0);
+       z-index: 9000;
+    }
+
+
+     .empuje{
+      width:100%;
+      background-color: rgba(255,0,0,0.0);
+      display:inline-block;
+      height: 100vh;
+
+     }
+
+     .linea{
+      width:100%;
+      background-color: rgba(100,100,255,0.5);
+      display:inline-block;
+      height:1px;
+      margin-bottom: 1vh; 
+
+     }
+
+   
+     .fechaEdicion {
+      position: absolute;
+      top:4.5vh;
+      left:50%;
+      font-size: 2.5vh;
+      color: rgba(255,255,255,1);
+
+      font-family: "Open sans", sans-serif;
+      font-weight: 300;
+      text-shadow: 0px 0px 6px #000000;
+      transform: translateX(-50%);
+    
+    }
+
+
+    #logo{
+      width:40vw;
+      position:absolute;
+      top:0;
+      left:50%;
+      transform: translateX(-50%);
+    }
+   
+   .news-body{
+
+   }
+
+
+    .news-body div{
+
+      margin-bottom:20px;
+      font-size:18px;
+      line-height: 20px;
+      text-align: left;
+    
+   }
+
+   .logo1{
+   	  position: absolute;
+      top:10px;
+      left:10px;
+      background-image: url(images/logo1.png);
+      width:100vw;
+      height: 20vh;
+      z-index: 9000;
+      background-size: 20vw;
+      background-repeat: no-repeat;
+   }
+
+   
+   .logo2{
+   	  position: absolute;
+      top:69vh;
+      left:0px;
+      background-image: url(images/logo2.png);
+      width:100vw;
+      height: 20vh;
+      z-index: 9000;
+      background-size: 50vw;
+      background-repeat: no-repeat;
+   }
+  </style>
+
+ 
+</head>
+<body>
+
+  
+    <div id="gallery">
+     
+      <ul>
+       
+       [bloque1;block=begin]   
+        <li class="dragend-page">
+          <div class="item">
+             <section>
+		              <div class="logo1"></div>
+		              <img src="[bloque1.foto]" class="imagenTop" >
+                   
+
+    
+                  <div class="contenido">
+
+
+                                      
+		              	 
+		              	 <div class="logo2"></div>	
+
+                         <div class="titulo">[bloque1.titulo;strconv=no] </div>
+
+                         <div class="empuje" ></div>
+                        
+                         <div class="linea" style="background-color:[bloque1.colorseccion];" ></div>
+                         <div class="bajada">[bloque1.bajada;strconv=no]</div>
+                         <div class="linea" style="background-color:[bloque1.colorseccion];"></div>
+                         
+                         <div class="texto">[bloque1.texto;strconv=no]</div>
+
+		              </div>
+		              <div class="cover"></div>
+		         
+            </section>
+          </div>
+            
+        </li>
+       [bloque1;block=end]
+        
+
+      </ul>
+    </div>
+  
+
+  
+
+
+  <script type="text/javascript" src="js/jquery-2.2.4.min.js"></script>
+  <script type="text/javascript" src="js/dragendtwo.js"></script>
+
+  <script>
+
+    $(function() {
+
+      var ancho=$(window).width();
+      var medio=ancho/2;
+      medio=medio;
+
+      $("#gallery").dragend({   borderBetweenPages: 5 });
+      
+      $(document).on("dragstart", function(event) {
+        if (event.target.nodeName.toUpperCase() == "IMG") {
+          return false;
+        }
+      });
+    });
+   
+   
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+﻿Version=6.8
+NumberOfModules=7
+Module1=TelefonoMain
+Module2=TabletMain
+Module3=conexion
+Module4=ServicioD
+Module5=setMenu
+Module6=SlideMenu
+Module7=StateManager
+Build1=Default,elquid.mobile.reader
+ManifestCode='This code will be applied to the manifest file during compilation.~\n~'You do not need to modify it in most cases.~\n~'See this link for for more information: http://www.basic4ppc.com/forum/showthread.php?p=78136~\n~AddManifestText(~\n~<uses-sdk android:minSdkVersion="4" android:targetSdkVersion="14"/>~\n~<supports-screens android:largeScreens="true" ~\n~    android:normalScreens="true" ~\n~    android:smallScreens="true" ~\n~    android:anyDensity="true"/>)~\n~SetApplicationAttribute(android:icon, "@drawable/icon")~\n~SetApplicationAttribute(android:label, "$LABEL$")~\n~SetActivityAttribute(Main, android:screenOrientation, "landscape")~\n~SetActivityAttribute(TelefonoMain, android:screenOrientation, "portrait")~\n~SetActivityAttribute(TabletMain, android:screenOrientation, "landscape")~\n~'End of default text.~\n~
+IconFile=
+NumberOfFiles=29
+File1=about.jpg
+File2=arranque.bal
+File3=back.png
+File4=boton abrir.png
+File5=boton cerrar.png
+File6=cargando.html
+File7=compartir.png
+File8=fallo.html
+File9=flechadown.png
+File10=fondo.jpg
+File11=fontchange.png
+File12=lacapitalsplash.jpg
+File13=logonegro.png
+File14=marcelo.jpg
+File15=menu.png
+File16=menuslide.png
+File17=next.png
+File18=onepage-scroll.css
+File19=onepagescroll.js
+File20=otros.jpg
+File21=pause.png
+File22=play.png
+File23=previo.png
+File24=refresh.png
+File25=specialfont.ttf
+File26=specialfont2.ttf
+File27=specialfont3.ttf
+File28=stop.png
+File29=vozalta.png
+NumberOfLibraries=14
+Library1=ahviewpager
+Library2=animationplus
+Library3=core
+Library4=gestures
+Library5=httputils2
+Library6=reflection
+Library7=webviewextras
+Library8=webviewxtended
+Library9=animation
+Library10=tts
+Library11=messharelibrary
+Library12=javaobject
+Library13=phone
+Library14=randomaccessfile
+@EndOfDesignText@
+#Region  Project Attributes 
+	#ApplicationLabel: EQC
+	#VersionCode: 5
+	#VersionName: 1.08
+	'SupportedOrientations possible values: unspecified, landscape or portrait.
+	#SupportedOrientations: unspecified
+	#CanInstallToExternalStorage: False
+#End Region
+
+#Region  Activity Attributes 
+	#FullScreen: True
+	#IncludeTitle: False
+#End Region
+
+Sub Process_Globals
+	'These global variables will be declared once when the application starts.
+	'These variables can be accessed from all modules.
+     Dim splashDone As Boolean=False
+	
+	 
+End Sub
+
+Sub Globals
+	'These global variables will be redeclared each time the activity is created.
+	'These variables can only be accessed from this module.
+   
+	Dim tablet As Boolean=False
+	Dim telefono As Boolean=False
+End Sub
+
+Sub Activity_Create(FirstTime As Boolean)
+	
+	Dim lv As LayoutValues
+    Dim size As Float
+    lv = GetDeviceLayoutValues
+    size = lv.ApproximateScreenSize
+	
+'   Activity.SetBackgroundImage (LoadBitmap (File.DirAssets,"fondo.jpg"))
+
+    Activity.LoadLayout("arranque")
+    
+	
+	Sleep(50)
+	
+	'######################################################
+	'si el tamño es de menos de 7 pulgadas es un telefono
+	'de lo contrario es una tablet
+	'######################################################
+	
+	If size < 7 Then telefono=True
+	If size >= 7 Then tablet=True 
+	
+	
+	If FirstTime Then
+       
+	   If telefono Then StartActivity(TelefonoMain)
+	   If tablet Then StartActivity(TabletMain)
+	   splashDone=True
+	Else
+	   If splashDone And telefono Then  StartActivity(TelefonoMain)
+	    If splashDone And tablet Then  StartActivity(TabletMain)
+	End If
+	
+End Sub
+
+Sub Activity_Resume
+    If splashDone Then Activity.Finish
+End Sub
+
+Sub Activity_Pause (UserClosed As Boolean)
+
+End Sub
+
+
+
+
+
+Sub Sleep(ms As Long)
+Dim now As Long
+   If ms > 1000 Then ms =1000   
+   now=DateTime.now
+   Do Until (DateTime.now>now+ms)
+     DoEvents
+   Loop
+End Sub
+
